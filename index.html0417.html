@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Showcase</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        h1 {
+            color: #007bff;
+        }
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Operator Showcase</h1>
+        <p>Here you can explore how arithmetic, comparison, and logical operators work in JavaScript. Click the buttons below to see the results.</p>
+        
+        <h2>Arithmetic Operators</h2>
+        <button class="btn btn-primary" onclick="showArithmetic()">Show Arithmetic</button>
+        <p id="arithmetic"></p>
+
+        <h2>Comparison Operators</h2>
+        <button class="btn btn-secondary" onclick="showComparison()">Show Comparison</button>
+        <p id="comparison"></p>
+
+        <h2>Logical Operators</h2>
+        <button class="btn btn-success" onclick="showLogical()">Show Logical</button>
+        <p id="logical"></p>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Data Types and Variables
+        var num1 = 10;
+        var num2 = 5;
+        
+        // Arithmetic Operators Function
+        function showArithmetic() {
+            var addition = num1 + num2; // Addition
+            var subtraction = num1 - num2; // Subtraction
+            var multiplication = num1 * num2; // Multiplication
+            var division = num1 / num2; // Division
+            var result = "Addition: " + addition + "<br>Subtraction: " + subtraction + "<br>Multiplication: " + multiplication + "<br>Division: " + division;
+            document.getElementById('arithmetic').innerHTML = result; // Display result
+        }
+
+        // Comparison Operators Function
+        function showComparison() {
+            var equal = (num1 == num2); // Equal to
+            var notEqual = (num1 != num2); // Not equal to
+            var greater = (num1 > num2); // Greater than
+            var less = (num1 < num2); // Less than
+            var result = "Equal to: " + equal + "<br>Not equal to: " + notEqual + "<br>Greater than: " + greater + "<br>Less than: " + less;
+            document.getElementById('comparison').innerHTML = result; // Display result
+        }
+
+        // Logical Operators Function
+        function showLogical() {
+            var and = (num1 > 0 && num2 > 0); // AND operator
+            var or = (num1 > 0 || num2 > 0); // OR operator
+            var not = !(num1 > 0); // NOT operator
+            var result = "AND operator: " + and + "<br>OR operator: " + or + "<br>NOT operator: " + not;
+            document.getElementById('logical').innerHTML = result; // Display result
+        }
+
+        // JavaScript Comments
+        // This is a single-line comment
+        /*
+            This is a multi-line comment
+            explaining the showLogical function.
+        */
+    </script>
+</body>
+</html>
